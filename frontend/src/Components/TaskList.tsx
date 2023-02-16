@@ -113,7 +113,7 @@ function TaskList() {
  
   <div>
   <h3>List of TaskLists</h3>
-<table>
+ <table>
   <tr>
     <th>Type</th>
     <th>Label</th>

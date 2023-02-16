@@ -120,12 +120,14 @@ Members:
 <td colSpan={12}>{error}</td>
            
           ) : (
-            groups.map((group: Group) => (
-              <tr key={group.name}>
-                <td>{group.name}</td>
-                <td>{group.members.map((member: User) => member.Name).join(", ")}</td>
-              </tr>
-            ))
+            groups.map((group) => {
+              return (
+                <tr key={group.name}>
+                  <td>{group.name}</td>
+                  <td>{group.members.map((member) => member.Name).join(", ")}</td>
+                </tr>
+              );
+            })
           )}
         </table>
       </div>
