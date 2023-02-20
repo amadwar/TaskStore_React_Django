@@ -10,10 +10,6 @@ function App() {
   return (
     <div className="App">
      
-     <div>
-     <Users/>
-     <br />
-     </div>
      
 
      <div>

@@ -80,10 +80,10 @@ function TaskTable() {
     title: '',
     description: '',
     due_date: '',
-    assigned_user: '',
-    assigned_group: '',
-    created_by: '',
-    modified_by: '',
+    assigned_user: 0,
+    assigned_group: 0,
+    created_by: 0,
+    modified_by: 0,
     status: '',
   });
 
@@ -96,7 +96,10 @@ headers: {
 'Content-Type': 'application/json',
 'X-CSRFToken': csrfToken
 }
+
+
 });
+console.log(formData);
 setTasks([...tasks, response.data]);
 } catch (error) {
 console.error(error);
