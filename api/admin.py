@@ -1,15 +1,15 @@
 from django.contrib import admin
 from api.models import Task,User,Group,TaskList,Board
 
-class UserAdmin(admin.ModelAdmin):
-    list_display=('Name','Rolle')
+
    
 # Register your models here.
+
+
+class UserAdmin(admin.ModelAdmin):
+    list_display=('name','role')
+
 admin.site.register(User,UserAdmin)
-
-
-
-
 
 
 @admin.register(Task)
@@ -28,5 +28,5 @@ class TaskListAdmin(admin.ModelAdmin):
     search_fields=["label"]
 @admin.register(Board)
 class TaskListAdmin(admin.ModelAdmin):
-    list_display=["Name"]
-    search_fields=["Name"]
+    list_display=["name"]
+    search_fields=["name"]

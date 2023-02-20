@@ -5,15 +5,15 @@ from enum import Enum
 
 class User(models.Model):
     
-    Name=models.CharField(max_length=50)
-    Rolle=models.CharField(max_length=20)
+    name=models.CharField(unique=True,max_length=50)
+    role=models.CharField(max_length=20)
     def __str__(self):
-        return self.Name
+        return self.name
 
 
 class Group(models.Model):
     
-    name = models.CharField(max_length=50)
+    name = models.CharField(unique=True,max_length=50)
     members = models.ManyToManyField(User, related_name='groups')
     def __str__(self):
         return self.name
@@ -47,7 +47,7 @@ class Task(models.Model):
 
 class Board(models.Model):
     
-    Name = models.CharField(max_length=20)
+    name = models.CharField(max_length=20)
     columns = models.ManyToManyField('TaskList', related_name='boards')
 
 
